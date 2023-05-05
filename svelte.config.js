@@ -8,10 +8,6 @@ const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: preprocess(),
-	onwarn(warning, handler) {
-		if (!warning.code.indexOf('a11y')) return;
-		handler(warning);
-	},
 	kit: {
 		paths: { assets: "", base },
 		adapter: adapter({
